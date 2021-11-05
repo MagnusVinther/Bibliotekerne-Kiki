@@ -1,0 +1,292 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$bgcPink: #FF99ac;
+$bgcGreen: #669999;
+
+html, body {
+  margin: auto;
+  height: auto;
+  min-height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  font-family: raleway;
+  /* font-size: 16px; */
+  color: black;
+  padding-top: 0;
+  background-color: $bgcGreen;
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    width: 100%;
+    // min-height: 15vh;
+    background-color: $bgcPink;
+    justify-content: space-between;
+
+    a {
+    color: whitesmoke;
+    font-size: 1.8vw;
+    font-weight: 500;
+
+    img {
+      object-fit: cover;
+    }
+    
+    &:hover {
+      text-decoration: underline;
+      transition: ease-in-out;
+      }
+    }
+  }
+
+  //skal arbejdes på - en fixed knap til at komme til login-side
+  #searchBar {
+    height: 20%;
+    width: 80%;
+    font-size: 1vw;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  nav {
+    width: 100%;
+    background-color: $bgcPink;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    // font-size: 1.5vw;
+    
+    
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1%;
+      text-align: center;
+      width: 100%;
+      
+      li {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 1.3;
+        
+        ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          z-index: 5;
+          margin-top: 18%;
+          position: absolute;
+          display: none;
+          background-color: rgb(201, 109, 125);
+          
+          
+          a {
+            color: whitesmoke;
+            margin-left: 2%;
+            font-size: 1.3vw;
+            font-weight: 300;
+            justify-items: left;
+          }
+        }
+        
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+
+/* Style all input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+  
+/* Style the button */
+input[type=button], input[type=reset] {
+  background-color: $bgcPink;
+  font-size: 1.3vw;
+  color: white;
+  width: 40%;
+  justify-content: center;
+  margin: auto 30%;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(58, 57, 57, 0.74) 1px 1px 1px 1px;
+  }
+}
+
+#backBtn {
+  background-color: $bgcPink;
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 4.7vw;
+  color: white;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.3vw;
+  margin: auto 30%;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(58, 57, 57, 0.74) 1px 1px 1px 1px;
+  }
+}
+
+  
+/* Style the container for inputs */
+.formWrap {
+    background-color: #f1f1f1;
+    padding: 40px;
+    width: 40%;
+    margin: 2% auto;
+}
+  
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    margin: 1% auto;
+    width: 40%;
+
+    p {
+        padding: 10px 35px;
+        font-size: 18px;
+
+    }
+}
+
+
+#myForm {
+    position: relative;
+
+    legend {
+      font-size: 2vw;
+    }
+    
+    p {
+      font-size: 1.3vw;
+      padding: 1% 0;
+      text-align: center;
+      margin-top: 4%;
+    }
+
+    a {
+      font-size: 1.3vw;
+      color: $bgcPink;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    #errormessageOne, #errormessageTwo {
+        position: absolute;
+        right: 0;
+        color: red;
+        font-size: 1.2vw;
+        
+    }
+}
+
+/* The user info box is shown when the user clicks on the login-button*/
+#userBox {
+    display: none;
+    background: #f1f1f1;
+    font-size: 1.3vw;
+    color: $bgcGreen;
+    padding: 20px;
+    margin-top: 10px;
+    margin: 1% auto;
+    width: 40%;
+
+    p, #demo, #demoTwo {
+        padding: 10px 35px;
+        font-size: 18px;
+        color: black;
+
+    }
+}
+  
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+
+    &:before {
+        position: relative;
+        left: -35px;
+        content: "✔";
+    }
+}
+  
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+    
+    &:before {
+        position: relative;
+        left: -35px;
+        content: "✖";
+    }
+}
+
+footer{
+    // position: absolute;
+    background-color: #ff99ac;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    align-items: center;
+    line-height: 2;
+    columns: 2;
+    width: 100%;
+    color: black;
+    text-align: left;
+    bottom: 0;
+    // height: 20vh;
+
+}
+
+.footerlogo {
+    width: 75%;
+}

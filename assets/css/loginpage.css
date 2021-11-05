@@ -1,0 +1,320 @@
+@charset "UTF-8";
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: auto;
+  height: auto;
+  min-height: 100vh;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  font-family: raleway;
+  /* font-size: 16px; */
+  color: black;
+  padding-top: 0;
+  background-color: #669999;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 70% 15%;
+      grid-template-columns: 15% 70% 15%;
+  width: 100%;
+  background-color: #FF99ac;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header a {
+  color: whitesmoke;
+  font-size: 1.8vw;
+  font-weight: 500;
+}
+
+header a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header a:hover {
+  text-decoration: underline;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+}
+
+#searchBar {
+  height: 20%;
+  width: 80%;
+  font-size: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  bottom: 0;
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  background-color: #FF99ac;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 1%;
+  text-align: center;
+  width: 100%;
+}
+
+nav ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  line-height: 1.3;
+}
+
+nav ul li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  z-index: 5;
+  margin-top: 18%;
+  position: absolute;
+  display: none;
+  background-color: #c96d7d;
+}
+
+nav ul li ul a {
+  color: whitesmoke;
+  margin-left: 2%;
+  font-size: 1.3vw;
+  font-weight: 300;
+  justify-items: left;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the button */
+input[type=button], input[type=reset] {
+  background-color: #FF99ac;
+  font-size: 1.3vw;
+  color: white;
+  width: 40%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto 30%;
+}
+
+input[type=button]:hover, input[type=reset]:hover {
+  cursor: pointer;
+  -webkit-box-shadow: rgba(58, 57, 57, 0.74) 1px 1px 1px 1px;
+          box-shadow: rgba(58, 57, 57, 0.74) 1px 1px 1px 1px;
+}
+
+#backBtn {
+  background-color: #FF99ac;
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 4.7vw;
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  font-size: 1.3vw;
+  margin: auto 30%;
+}
+
+#backBtn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: rgba(58, 57, 57, 0.74) 1px 1px 1px 1px;
+          box-shadow: rgba(58, 57, 57, 0.74) 1px 1px 1px 1px;
+}
+
+/* Style the container for inputs */
+.formWrap {
+  background-color: #f1f1f1;
+  padding: 40px;
+  width: 40%;
+  margin: 2% auto;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+  margin: 1% auto;
+  width: 40%;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+#myForm {
+  position: relative;
+}
+
+#myForm legend {
+  font-size: 2vw;
+}
+
+#myForm p {
+  font-size: 1.3vw;
+  padding: 1% 0;
+  text-align: center;
+  margin-top: 4%;
+}
+
+#myForm a {
+  font-size: 1.3vw;
+  color: #FF99ac;
+}
+
+#myForm a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#myForm #errormessageOne, #myForm #errormessageTwo {
+  position: absolute;
+  right: 0;
+  color: red;
+  font-size: 1.2vw;
+}
+
+/* The user info box is shown when the user clicks on the login-button*/
+#userBox {
+  display: none;
+  background: #f1f1f1;
+  font-size: 1.3vw;
+  color: #669999;
+  padding: 20px;
+  margin-top: 10px;
+  margin: 1% auto;
+  width: 40%;
+}
+
+#userBox p, #userBox #demo, #userBox #demoTwo {
+  padding: 10px 35px;
+  font-size: 18px;
+  color: black;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+footer {
+  background-color: #ff99ac;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 40% 40%;
+      grid-template-columns: 20% 40% 40%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2;
+  -webkit-columns: 2;
+          columns: 2;
+  width: 100%;
+  color: black;
+  text-align: left;
+  bottom: 0;
+}
+
+.footerlogo {
+  width: 75%;
+}
+/*# sourceMappingURL=loginpage.css.map */

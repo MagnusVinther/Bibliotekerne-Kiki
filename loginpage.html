@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/loginpage.css">
+    <script src="./assets/js/loginForm.js" defer></script>
+    <title>Als Bibliotek Login</title>
+</head>
+
+
+<header>
+    <a class="aLogo" href="./index.html"><img class="logo" src="./assets/Logo/Skrmbillede_2021-10-26_kl._09.29.08.png"/></a>
+      <nav>
+        <ul>
+
+          <li>
+            <a href="#">Arrangementer</a>
+            <ul>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Inspiration</a>
+            <ul>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Vi tilbyder</a>
+            <ul>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Børn & Forældre</a>
+            <ul>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Info</a>
+            <ul>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+              <li><a href="#">Item</a></li>
+            </ul>
+          </li>
+
+      </ul>
+    </nav>
+    <input type="search" name="searchbar" placeholder="Søg efter noget..." id="searchBar">
+  </header>
+
+<body>
+
+<div class="flex-wrapper">
+
+<main>
+
+<div class="formWrap">
+  <form id="myForm">
+    <legend>Registrer som bruger</legend> <br>
+    <label for="username">Brugernavn</label>
+    <span id="errormessageOne"></span>
+    <input type="text" id="username" name="username" required>
+
+    <label for="psw">Adgangskode</label>
+    <span id="errormessageTwo"></span>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    
+    <input onclick='userInfo()' type="button" id="loginBtn" value="Registrer nu!">
+    <p>Allerede tilmeldt? <a href="#">Log ind hér.</a></p>
+  </form>
+</div>
+
+<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+
+<div id="userBox">
+    <p id="demo"></p> <br>
+    <p id="demoTwo"></p> <br>
+    <a id="backBtn" href="./index.html">Okay tak!</a>
+</div>
+</main>
+
+<footer>
+    <img class="footerlogo" src="./assets/Logo/Skrmbillede_2021-10-26_kl._09.29.08.png" alt="ll"/>
+        <div class="footertext">
+          <b><p>Navn:</b> Mariane Lis</p>
+          <b><p>Mobil nr:</b> 93 84 65 71</p>
+          <b><p>Adresse:</b> Als; 9560 Hadsund</p>
+        </div>
+  
+        <div class="åbningstider">
+          <b><p>Åbningstider:</b></p>
+          <p>Mandag - Torsdag: 8:00-21:00</p> 
+          <p>Fredag: 11:00-17:00</p> 
+          <p>Lørdag - Søndag: Lukket</p>
+        </div>
+      </div>
+  </footer>
+</div>    
+</body>
+</html>
